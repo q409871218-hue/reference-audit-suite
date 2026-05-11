@@ -195,4 +195,4 @@ MIT License — 详见 [LICENSE](LICENSE) 文件。
 
 **版本**: 1.0.0  
 **更新日期**: 2026-05-10  
-**维护**: Hermes Agent 团队
+
