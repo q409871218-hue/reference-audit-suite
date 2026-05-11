@@ -1,0 +1,57 @@
+name: 🐛 Bug 报告
+description: 报告审计 Skill 的问题或错误
+title: "[Bug] "
+labels: ["bug"]
+assignees: []
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      ## 问题描述
+      清晰描述遇到的问题。
+
+- type: input
+  id: skill
+  attributes:
+    label: 涉及 Skill
+    description: 哪个 Skill 文件？（如 `cross-reference-audit.md`）
+  validations:
+    required: true
+
+- type: textarea
+  id: input
+  attributes:
+    label: 输入内容
+    description: 提供审计的输入文本（脱敏后）
+  validations:
+    required: true
+
+- type: textarea
+  id: expected
+  attributes:
+    label: 预期输出
+    description: 你期望的正确结果
+
+- type: textarea
+  id: actual
+  attributes:
+    label: 实际输出
+    description: 当前得到的错误结果
+
+- type: input
+  id: hermes-version
+  attributes:
+    label: Hermes 版本
+    description: 运行 `hermes --version`
+  validations:
+    required: true
+
+- type: checkboxes
+  id: checklist
+  attributes:
+    label: 检查清单
+    options:
+      - label: 我已查看 [常见问题](README.md#常见问题)
+      - label: 我已确认输入格式正确
+      - label: 这是在其他 Skill 也出现的问题（不是本套件独有）
